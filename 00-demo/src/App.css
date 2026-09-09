@@ -1,0 +1,15 @@
+h1 {
+  background-color: #222;
+  padding: 25px;
+  color: white;
+  text-align: center;
+}
+
+.cont-app {
+  background-color: #aaa;
+  min-height: 100vh;
+}
+
+ul {
+  padding: 40px;
+}
