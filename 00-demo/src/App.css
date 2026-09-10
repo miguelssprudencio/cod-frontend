@@ -1,15 +1,111 @@
-h1 {
-  background-color: #222;
-  padding: 25px;
-  color: white;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+body {
+  background-color: #0f172a; 
+  margin: 0;
+  padding: 2rem 1rem;
+  font-family: 'Inter', sans-serif;
+  color: #e2e8f0;
+  display: flex;
+  justify-content: center;
 }
+
 
 .cont-app {
-  background-color: #aaa;
-  min-height: 100vh;
+  background-color: #1e293b;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+  border-top: 5px solid #3b82f6; 
 }
 
-ul {
-  padding: 40px;
+.cont-app h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(90deg, #3b82f6, #48c5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+}
+
+.cont-app h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #48c5ff;
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #334155;
+}
+
+.cont-app p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 1.2rem;
+}
+
+.cont-app ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.cont-app li {
+  background-color: #0f172a;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #a855f7;
+  font-weight: 600;
+  color: #f1f5f9;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.cont-app li:hover {
+  transform: translateX(10px);
+  background-color: #172033;
+  border-left-color: #3b82f6; 
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .cont-app {
+    padding: 1.5rem;
+  }
+  
+  .cont-app h1 {
+    font-size: 2rem;
+  }
+}
+
+.faq-item {
+  background-color: #0f172a;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+  border-left: 4px solid #38bdf8;
+}
+
+.cont-app h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+  margin-bottom: 0;
+  font-size: 0.98rem;
+  color: #94a3b8;
 }
