@@ -182,3 +182,46 @@
     border-right-color: var(--border);
   }
 }
+
+body { 
+  background-color: rgb(20, 20, 20);
+}
+
+h1 {
+  color: rgb(255, 196, 0);
+  text-shadow: 0 0 10px rgba(255, 196, 0, 0.5);
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px rgba(255, 196, 0, 0.5);
+}
+
+button {
+  background-color: rgb(255, 196, 0);
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  padding: 7.5px 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-bottom: 24px;
+  width: 150px; 
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(255, 196, 0, 0.5);
+}
+
+.cont-app {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;              
+  align-items: center;
+  border-color: rgb(255, 196, 0);
+  background-color: rgb(70, 8, 0);
+}
+
+button:hover {
+  background-color: rgb(255, 145, 0);
+  transition: background-color 0.5s ease, transform 0.2s ease; 
+}
