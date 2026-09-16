@@ -85,6 +85,12 @@ function recrutar() {
   let chanceAprovacao = (0.1 / (1 + 500 * olhada)) * 100;
   alert(`O candidato usou o celular ${olhada} vez(es) durante as etapas.`);
   alert(`Baseado no método, a chance de aprovação deste candidato é de: ${chanceAprovacao.toFixed(4)}%`);
+  let umaEmCada = 100 / chanceAprovacao;
+  if (olhada === 0) {
+    alert(`Estatística: Com essa dedicação, 1 em cada ${umaEmCada.toFixed(0)} candidatos com esse perfil é aprovado! (Chance máxima de 10%)`);
+  } else {
+    alert(`Estatística: Apenas 1 em cada ${umaEmCada.toFixed(0)} candidatos com esse comportamento consegue ser aprovado.`);
+  }
 }
 
 
