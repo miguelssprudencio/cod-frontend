@@ -4,7 +4,6 @@ function App() {
   
   function testar() {
     let nome = prompt('Qual é o seu nome?');
-    let bocaDoSapo = nome
     alert(`${nome}, seu nome está na bocaDoSapo 🐸`)
   }
 
