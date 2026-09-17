@@ -93,19 +93,156 @@ function recrutar() {
   }
 }
 
+function transportar() {
+  let peso = Number(prompt('Digite o peso da carga:'));
+  let distancia = Number(prompt('Digite a distância:'));
+  let volume = Number(prompt('Digite o volume da carga:'));
+  let frete = 15 + (2 * peso) + (0.05 * distancia) + (10 * volume);
+  alert(`O preço do frete é: R$ ${frete.toFixed(2)}`);
+}
+
+function jogar() {
+  let faturamento = Number(prompt('Digite o faturamento total:'));
+  let premiacoes = Number(prompt('Digite o valor pago em premiações:'));
+  let presentes = Number(prompt('Digite o valor gasto em "presentes":'));
+  let comissoes = Number(prompt('Digite o valor das comissões:'));
+  let lucro = faturamento - premiacoes - presentes - comissoes;
+  alert(`O lucro da Dona Bete é: R$ ${lucro.toFixed(2)}`);
+}
+
+function vender() {
+  let gastos = Number(prompt('Digite o valor gasto em suprimentos e mercadorias:'));
+  let fatIngressos = Number(prompt('Digite o faturamento em venda de ingressos:'));
+  let fatItens = Number(prompt('Digite o faturamento em venda de ítens:'));
+  let lucro = (fatIngressos + fatItens) - gastos;
+  let percentualLucro = (lucro / (fatIngressos + fatItens)) * 100;
+  alert(`O lucro obtido é: R$ ${lucro.toFixed(2)}`);
+  alert(`O lucro percentual é: ${percentualLucro.toFixed(2)}%`);
+}
+
+function show() {
+  let shows = Number(prompt('Digite a quantidade de shows que Sarumano tem marcado:'));
+  let precoUnitario = Number(prompt('Digite o preço unitário da bomba de fumaça:'));
+  let bombasNecessarias = shows * 7;
+  let custoTotal = bombasNecessarias * precoUnitario;
+  alert(`Sarumano precisa comprar ${bombasNecessarias} bombas de fumaça.`);
+  alert(`O custo total para comprar as bombas é: R$ ${custoTotal.toFixed(2)}`);
+}
+
+function pagar() {
+  let salario = Number(prompt('Digite o valor do salário:'));
+  let moradia = Number(prompt('Digite o valor da conta de moradia:'));
+  let agua = Number(prompt('Digite o valor da conta de água:'));
+  let luz = Number(prompt('Digite o valor da conta de luz:'));
+  let internet = Number(prompt('Digite o valor da conta de internet:'));
+  let gasolina = Number(prompt('Digite o valor da conta de gasolina:'));
+  let streamings = Number(prompt('Digite o valor da conta de streamings:'));
+  let telefone = Number(prompt('Digite o valor da conta de telefone:'));
+  let outros = Number(prompt('Digite o valor da conta de outros:'));
+  let sobra = salario - (moradia + agua + luz + internet + gasolina + streamings + telefone + outros);
+  alert(`O que sobrou no fim do mês é: R$ ${sobra.toFixed(2)}`);
+}
+
+function revender() {
+  let custo = Number(prompt('Digite o valor que você pagou pela obra:'));
+  let precoVenda = custo * 3;
+  alert(`O preço de venda da obra deve ser: R$ ${precoVenda.toFixed(2)}`);
+}
+
+function racao() {
+  let peso = Number(prompt('Digite o peso da ração em gramas:'));
+  let preco = (peso / 1000) * 10;
+  alert(`O preço da ração é: R$ ${preco.toFixed(2)}`);
+}
+
+function churrasco() {
+  let pessoas = Number(prompt('Digite o número de pessoas:'));
+  let carne = pessoas * 0.5;
+  let cerveja = pessoas * 1;
+  let agua = pessoas * 0.5;
+  let refri = pessoas * 0.2;
+  alert(`Para ${pessoas} pessoas, você precisa de:`);
+  alert(`${carne.toFixed(2)}kg de carne`);
+  alert(`${cerveja.toFixed(2)}l de cerveja`);
+  alert(`${agua.toFixed(2)}l de água`);
+  alert(`${refri.toFixed(2)}l de refrigerante`);
+}
+
+function venderjare() {
+  let caminhoes = Number(prompt('Digite o número de caminhões:'));
+  let jarésVendidos = caminhoes * 50;
+  let faturamento = jarésVendidos * 90;
+  let custo = caminhoes * 450;
+  let lucro = faturamento - custo;
+  alert(`O lucro da temporada de vendas é: R$ ${lucro.toFixed(2)}`);
+}
+
+function ler() {
+  let caracteres = Number(prompt('Digite o número de caracteres do prompt:'));
+  let custoToken = Number(prompt('Digite o custo do token (R$):'));
+  let tokensUsados = 5 + caracteres;
+  let custoTotal = tokensUsados * custoToken;
+  alert(`O número de tokens usados é: ${tokensUsados}`);
+  alert(`O custo total do prompt é: R$ ${custoTotal.toFixed(2)}`);
+}
+
+function freeler() {
+  let horas = Number(prompt('Digite a quantidade estimada de horas:'));
+  let precoCobrado = 500 + (horas * 350);
+  let lucro = precoCobrado - 500;
+  alert(`O preço que Junin deve cobrar do seu cliente é: R$ ${precoCobrado.toFixed(2)}`);
+  alert(`O lucro do freela é: R$ ${lucro.toFixed(2)}`);
+}
+
+function relatar() {
+  let relPF = Number(prompt('Digite a quantidade de relatórios para PF:'));
+  let relPJ = Number(prompt('Digite a quantidade de relatórios para PJ:'));
+  let tempoPF = Number(prompt('Digite o tempo para elaborar os relatórios PF (em horas):'));
+  let tempoPJ = Number(prompt('Digite o tempo para elaborar os relatórios PJ (em horas):'));
+  let valorPF = Number(prompt('Digite o valor total recebido de PF (em R$):'));
+  let valorPJ = Number(prompt('Digite o valor total recebido de PJ (em R$):'));
+
+  let totalRelatorios = relPF + relPJ;
+  let tempoTotal = tempoPF + tempoPJ;
+  let valorTotal = valorPF + valorPJ;
+  let mediaValorPF = valorPF / relPF || 0;
+  let mediaValorPJ = valorPJ / relPJ || 0;
+  let mediaTempoPF = tempoPF / relPF || 0;
+  let mediaTempoPJ = tempoPJ / relPJ || 0;
+
+  alert(`Quantidade total de relatórios: ${totalRelatorios}`);
+  alert(`Tempo total trabalhado: ${tempoTotal} horas`);
+  alert(`Valor total recebido: R$ ${valorTotal.toFixed(2)}`);
+  alert(`Média de valor recebido para cada relatório PF: R$ ${mediaValorPF.toFixed(2)}`);
+  alert(`Média de valor recebido para cada relatório PJ: R$ ${mediaValorPJ.toFixed(2)}`);
+  alert(`Média de tempo gasto por relatório PF: ${mediaTempoPF.toFixed(2)} horas`);
+  alert(`Média de tempo gasto por relatório PJ: ${mediaTempoPJ.toFixed(2)} horas`);
+}
 
   return (
 <div className="cont-app">
 <h1>Javascript no React</h1>
 <h2>Exercícios supimpas</h2>
-<button onClick={calcularPontos}>Campeonato</button>
-<button onClick={trocarSapatos}>Trocas Pé Pequeno</button>
-<button onClick={empregados}>Trabalhadores da Empresa</button>
-<button onClick={pomar}>Projeto Pomar</button>
-<button onClick={dizimar}>Igreja</button>
-<button onClick={trampar}>Trabalho Dev</button>
-<button onClick={carga}>Carga do Caminhão</button>
-<button onClick={recrutar}>Olhada Celular</button>
+<button onClick={calcularPontos}>Campeonato (A1)</button>
+<button onClick={trocarSapatos}>Trocas Pé Pequeno (A2)</button>
+<button onClick={empregados}>Trabalhadores da Empresa (A3)</button>
+<button onClick={pomar}>Projeto Pomar (A4)</button>
+<button onClick={dizimar}>Igreja (A5)</button>
+<button onClick={trampar}>Trabalho Dev (A6)</button>
+<button onClick={carga}>Carga do Caminhão (A7)</button>
+<button onClick={recrutar}>Olhada Celular (A8)</button>
+<button onClick={transportar}>frete (B1)</button>
+<button onClick={jogar}>jogo de aposta (B2)</button>
+<button onClick={vender}>Vender Ingressos (B3)</button>
+<button onClick={show}>Ilusionismo (B4)</button>
+<button onClick={pagar}>Despesas (B5)</button>
+<button onClick={revender}>Revender Artes (B6)</button>
+<button onClick={racao}>Pet Shop (B7)</button>
+<button onClick={churrasco}>Churrascaria do Gaúcho (B8)</button>
+<button onClick={venderjare}>Vender Jaré (C1)</button>
+<button onClick={ler}>Istartup I.A (C2)</button>
+<button onClick={freeler}>Projetos Freeler (C3)</button>
+<button onClick={relatar}>Relatório do Kovalski (C4)</button>
 <hr />
 <button onClick={testar}>testar</button>
 <button onClick={calcularMedia}>Média</button>
